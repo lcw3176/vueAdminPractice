@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://unpkg.com/vue@2"></script>
+</head>
+
+<body>
+    <div id="app">
+        <p v-if="dog">반려동물은 강아지지!</p>
+        <p v-else>무슨소리, 고양이지!</p>
+        <button v-on:click="dog = !dog">반대</button>
+    </div>
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                dog: true
+            }
+        })
+    </script>
+</body>
+
+</html>

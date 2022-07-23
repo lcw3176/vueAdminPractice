@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://unpkg.com/vue@2"></script>
+</head>
+
+<body>
+    <div id="app">
+        <a v-bind:href="link">링크</a>
+        <a v-on:click="popup">헬로우</a>
+        <a :href="link">링크</a>
+        <a @click="popup">헬로우</a>
+    </div>
+    <script>
+
+        new Vue({
+            el: "#app",
+            data: {
+                link: "https://medium.com"
+            },
+            methods: {
+                popup: function(){
+                    alert("hello");
+                }
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>

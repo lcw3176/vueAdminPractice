@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://unpkg.com/vue@2"></script>
+</head>
+
+<body>
+    <div id="app">
+        <p>{{diceNumber}}</p>
+        <button @click="changeDiceNumber">주사위</button>
+    </div>
+    <script>
+
+        new Vue({
+            el: "#app",
+            data: {
+                diceNumber: 0
+            },
+
+            methods: {
+                changeDiceNumber: function() {
+                    this.diceNumber = Math.floor(Math.random() * (6 - 1)) + 1;
+                }
+            }
+        });
+        
+    </script>
+
+</body>
+
+</html>
