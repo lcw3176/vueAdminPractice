@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+
+
+    <title>좋아요</title>
+
+</head>
+
+<body>
+    <div id="root">
+        <v-card-text>{{first}}</v-card-text>
+        <v-text-field solo v-model="value"></v-text-field>
+        <v-btn elevation="2" v-on:click="submitAnswer">입력</v-btn>
+        <v-card-text>{{result}}</v-card-text>
+    </div>
+    <script>
+        const app = new Vue({
+            el: "#root",
+            data: {
+                first: '조브룩스',
+                value: '',
+                result: '',
+            }, 
+
+            methods: {
+                submitAnswer(){
+                  
+                } 
+            },
+        })
+    </script>
+</body>
+
+</html>

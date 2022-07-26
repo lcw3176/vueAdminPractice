@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <script src="https://unpkg.com/vue@2"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <title>좋아요</title>
+
+</head>
+
+<body>
+    <div id="root">
+        <p>{{first}} 곱하기 {{second}} 는?</p>
+        <input type="number" v-model="value" style="border: 2px solid black">
+        <button v-on:click="submitAnswer">입력</button>
+        <p>{{result}}</p>
+    </div>
+    <script>
+        const app = new Vue({
+            el: "#root",
+            data: {
+                first: Math.ceil(Math.random() * 9),
+                second: Math.ceil(Math.random() * 9),
+                value: '',
+                result: '',
+            }, 
+
+            methods: {
+                submitAnswer(){
+                    if(this.first * this.second === parseInt(this.value)){
+                        this.result = "정답";
+                        this.first = Math.ceil(Math.random() * 9);
+                        this.second = Math.ceil(Math.random() * 9);
+                    } else {
+                        this.result = "오답";
+                    }
+                } 
+            },
+        })
+    </script>
+</body>
+
+</html>
