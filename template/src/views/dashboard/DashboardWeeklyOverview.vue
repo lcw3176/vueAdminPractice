@@ -32,24 +32,23 @@ export default {
   setup() {
     const ins = getCurrentInstance()?.proxy
     const $vuetify = ins && ins.$vuetify ? ins.$vuetify : null
-    const customChartColor = $vuetify.theme.isDark ? '#3b3559' : '#f5f5f5'
 
     const chartOptions = {
       colors: [
-        customChartColor,
-        customChartColor,
-        customChartColor,
-        customChartColor,
         $vuetify.theme.currentTheme.primary,
-        customChartColor,
-        customChartColor,
+        $vuetify.theme.currentTheme.primary,
+        $vuetify.theme.currentTheme.primary,
+        $vuetify.theme.currentTheme.primary,
+        $vuetify.theme.currentTheme.primary,
+        $vuetify.theme.currentTheme.primary,
+        $vuetify.theme.currentTheme.primary,
       ],
       chart: {
         type: 'bar',
         toolbar: {
           show: false,
         },
-        offsetX: -15,
+        offsetX: -10,
       },
       plotOptions: {
         bar: {
@@ -67,7 +66,7 @@ export default {
         show: false,
       },
       xaxis: {
-        categories: ['일', '월', '화', '수', '목', '금', 'S'],
+        categories: ['일', '월', '화', '수', '목', '금', '토'],
         axisBorder: {
           show: false,
         },
@@ -103,7 +102,7 @@ export default {
 
     const chartData = [
       {
-        data: [40, 60, 50, 60, 75, 60, 50, 65],
+        data: [40, 60, 50, 60, 75, 60, 50],
       },
     ]
 
