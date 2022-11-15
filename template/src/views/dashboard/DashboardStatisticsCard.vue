@@ -51,9 +51,16 @@
 <script>
 // eslint-disable-next-line object-curly-newline
 import { mdiAccountOutline, mdiCurrencyUsd, mdiTrendingUp, mdiDotsVertical, mdiLabelOutline } from '@mdi/js'
+import axios from 'axios'
 
 export default {
-  setup() {
+  
+
+  mounted: function () {
+    console.log("마운트");
+  },
+
+  setup(){
     const statisticsData = [
       {
         title: '누적 이용자',
@@ -95,6 +102,7 @@ export default {
         mdiCurrencyUsd,
       },
     }
-  },
+  }
+
 }
 </script>
