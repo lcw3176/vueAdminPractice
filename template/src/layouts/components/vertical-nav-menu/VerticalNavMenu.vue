@@ -43,26 +43,30 @@
         :icon="icons.mdiHomeOutline"
       ></nav-menu-link>
       <nav-menu-link
-        title="유저 이용 현황"
-        :to="{ name: 'pages-account-settings'}"
+        title="공지사항"
+        :to="{ name: 'notice'}"
         :icon="icons.mdiAccountCogOutline"
       ></nav-menu-link>
+
+      <nav-menu-link
+        title="문의사항"
+        :to="{ name: 'contact'}"
+        :icon="icons.mdiEmailOpenOutline"
+      ></nav-menu-link>
+
+
       <nav-menu-group
-        title="공지사항"
+        title="템플릿"
         :icon="icons.mdiFileOutline"
       >
         <nav-menu-link
-          title="작성"
+          title="로그인"
           :to="{ name: 'pages-login' }"
           target="_blank"
         ></nav-menu-link>
+
         <nav-menu-link
-          title="수정"
-          :to="{ name: 'pages-register' }"
-          target="_blank"
-        ></nav-menu-link>
-        <nav-menu-link
-          title="삭제"
+          title="에러페이지"
           :to="{ name: 'error-404' }"
           target="_blank"
         ></nav-menu-link>
@@ -98,6 +102,7 @@ import {
   mdiFileOutline,
   mdiFormSelect,
   mdiAccountCogOutline,
+  mdiEmailOpenOutline,
 } from '@mdi/js'
 import NavMenuSectionTitle from './components/NavMenuSectionTitle.vue'
 import NavMenuGroup from './components/NavMenuGroup.vue'
@@ -126,6 +131,7 @@ export default {
         mdiFileOutline,
         mdiFormSelect,
         mdiAccountCogOutline,
+        mdiEmailOpenOutline,
       },
     }
   },

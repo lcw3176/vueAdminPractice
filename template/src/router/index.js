@@ -13,6 +13,19 @@ const routes = [
     name: 'dashboard',
     component: () => import('@/views/dashboard/Dashboard.vue'),
   },
+  
+  {
+    path: '/notice',
+    name: 'notice',
+    component: () => import('@/views/notice/Notice.vue'),
+  },
+
+  {
+    path: '/contact',
+    name: 'contact',
+    component: () => import('@/views/notice/Notice.vue'),
+  },
+
   {
     path: '/typography',
     name: 'typography',

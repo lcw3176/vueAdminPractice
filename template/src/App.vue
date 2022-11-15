@@ -11,10 +11,15 @@ import LayoutBlank from '@/layouts/Blank.vue'
 import LayoutContent from '@/layouts/Content.vue'
 
 export default {
+  created() {
+    document.title = "Mapshot Admin";
+  },
+
   components: {
     LayoutBlank,
     LayoutContent,
   },
+  
   setup() {
     const { route } = useRouter()
 
